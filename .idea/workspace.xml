@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3eef8324-d43e-4d54-a579-82d33086f924" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/project/bdd/base/BaseSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/project/bdd/base/BaseSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/project/bdd/pages/CreateAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/project/bdd/pages/CreateAccountPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/project/bdd/runner/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/project/bdd/runner/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/project/bdd/utility/SeleniumUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/project/bdd/utility/SeleniumUtilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/project/bdd/steps/CreateAccountTestSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/project/bdd/steps/CreateAccountTestSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/CreateAccountTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/CreateAccountTest.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +44,26 @@
     "git-widget-placeholder": "main"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="RandomEmailGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="project.bdd.utility.RandomEmailGenerator" />
+      <module name="hejaz-final-project-bdd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="project.bdd.utility.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.RandomEmailGenerator" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

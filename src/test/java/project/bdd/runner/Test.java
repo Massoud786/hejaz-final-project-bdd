@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "classpath:features/CreateAccountTest.feature",
         glue = "project.bdd.steps",
+        tags = "@CreateAccount",
         dryRun = false
 )
 public class Test {
