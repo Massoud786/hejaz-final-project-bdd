@@ -18,7 +18,7 @@ public class BaseSetup {
     public BaseSetup(){
         try {
             String fileFilePath = System.getProperty("user.dir") +
-                    "/src/test/resources/config/application-config.properties";
+                    "/src/test/resources/configuration/application-configuration.properties";
             File propertiesFile = new File(fileFilePath);
             FileInputStream propertyFileInputStream = new FileInputStream(propertiesFile);
             properties.load(propertyFileInputStream);

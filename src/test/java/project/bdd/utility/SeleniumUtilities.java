@@ -28,6 +28,7 @@ public class SeleniumUtilities extends BaseSetup {
     public boolean isElementDisplayed(By locator){
         return getWait().until(ExpectedConditions.visibilityOfElementLocated(locator)).isDisplayed();
     }
+
     public void selectFromDropDown(By locator, String visibleText){
         WebElement selectElement = driver.findElement(locator);
         Select select = new Select(selectElement);
