@@ -15,8 +15,8 @@ public class LoginTestSteps extends SeleniumUtilities {
     public void userClicksOnLoginButton() {
         clickOnElement(LoginPage.LOGIN_BUTTON);
     }
-    @When("user fills up the login form with map data table")
-    public void userFillsUpTheLoginFormWithMapDataTable(DataTable dataTable) {
+    @When("user fills up the login form")
+    public void userFillsUpTheLoginForm(DataTable dataTable) {
         Map<String, String> data = dataTable.asMap();
         String userName = data.get("username");
         String password = data.get("password");
@@ -37,8 +37,8 @@ public class LoginTestSteps extends SeleniumUtilities {
     public void userClicksOnLoginButtonToNavigateToLoginPage() {
         clickOnElement(LoginPage.LOGIN_BUTTON);
     }
-    @When("User fills up the login form with map data table")
-    public void usersFillUpTheLoginFormWithMapDataTable(DataTable dataTable) {
+    @When("User fills up the login form with invalid credentials")
+    public void usersFillUpTheLoginFormWithInvalidCredentials(DataTable dataTable) {
        Map<String, String> data = dataTable.asMap();
        String userName = data.get("username");
        String password = data.get("password");
@@ -61,8 +61,8 @@ public class LoginTestSteps extends SeleniumUtilities {
     public void userClicksOnLoginButtonToBeTakenToLoginPage() {
         clickOnElement(LoginPage.LOGIN_BUTTON);
     }
-    @When("User fills up the login form with valid username and invalid password using map data table")
-    public void userFillsUpTheLoginFormWithValidUsernameAndInvalidPasswordUsingMapDataTable(DataTable dataTable) {
+    @When("User fills up the login form with valid username and invalid password")
+    public void userFillsUpTheLoginFormWithValidUsernameAndInvalidPassword(DataTable dataTable) {
        Map<String, String> data = dataTable.asMap();
        String username = data.get("username");
        String password = data.get("password");

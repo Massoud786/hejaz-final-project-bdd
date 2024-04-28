@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "classpath:features",
         glue = "project.bdd.steps",
-        tags = "@Login_3",
+        tags = "@UserProfile_2",
         dryRun = false
 )
 public class Test {

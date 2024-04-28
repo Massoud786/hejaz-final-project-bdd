@@ -26,8 +26,8 @@ public class CreateAccountTestSteps extends SeleniumUtilities {
     public void userClicksOnCreatePrimaryAccountBtn() {
         clickOnElement(CreateAccountPage.CREATE_PRIMARY_ACCOUNT_BUTTON);
     }
-    @When("User fills up the form with map data table")
-    public void userFillsUpTheFormWithMapDataTable(DataTable dataTable) {
+    @When("User fills up the form")
+    public void userFillsUpTheForm(DataTable dataTable) {
     Map<String, String> data = dataTable.asMap();
     String firstName = data.get("firstName");
     String gender = data.get("gender");
@@ -66,8 +66,8 @@ public class CreateAccountTestSteps extends SeleniumUtilities {
     public void userNavigatesToAccountCreationPage() {
         clickOnElement(CreateAccountPage.CREATE_PRIMARY_ACCOUNT_BUTTON);
     }
-    @When("user fills up the form with existing credential using map data table")
-    public void userFillsUpTheFormWithExistingCredentialUsingMapDataTable(DataTable dataTable) {
+    @When("user fills up the form with existing credentials")
+    public void userFillsUpTheFormWithExistingCredentials(DataTable dataTable) {
         Map<String, String> data = dataTable.asMap();
         String email = data.get("email");
         String firstName = data.get("firstName");

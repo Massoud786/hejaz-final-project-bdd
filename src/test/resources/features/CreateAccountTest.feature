@@ -4,9 +4,9 @@ Feature:Create New Account Test
     When User clicks on create primary account button
     Then Validate form page title "Create Primary Account Holder"
 @CreateAccount_1
-    Scenario: Fill up the form and create new account
+    Scenario: Fill up the form and create new account using map data table
       Given User clicks on create primary account button
-      When User fills up the form with list map data table
+      When User fills up the form
       |email           |hejaz_12099@gmail.com|
       |firstName       |Hejaz                |
       |gender          |Male                 |
@@ -20,9 +20,9 @@ Feature:Create New Account Test
       Then Validate email shows as expected on the page
 
   @CreateAccount_2
-  Scenario: Validate account creation with existing email address
+  Scenario: Validate account creation with existing email address using map data table
     Given User navigates to account creation page
-    When user fills up the form with existing credential using map data table
+    When user fills up the form with existing credentials
       |email           |Hejaz_12@gmail.com|
       |firstName       |Hejaz                |
       |gender          |Male                 |
