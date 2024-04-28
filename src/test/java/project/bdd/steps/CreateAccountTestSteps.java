@@ -26,8 +26,8 @@ public class CreateAccountTestSteps extends SeleniumUtilities {
     public void userClicksOnCreatePrimaryAccountBtn() {
         clickOnElement(CreateAccountPage.CREATE_PRIMARY_ACCOUNT_BUTTON);
     }
-    @When("User fills up the form with list map data table")
-    public void user_fills_up_the_form_with_list_map_data_table(DataTable dataTable) {
+    @When("User fills up the form with map data table")
+    public void userFillsUpTheFormWithMapDataTable(DataTable dataTable) {
     Map<String, String> data = dataTable.asMap();
     String firstName = data.get("firstName");
     String gender = data.get("gender");
@@ -48,19 +48,54 @@ public class CreateAccountTestSteps extends SeleniumUtilities {
 
     }
     @When("user clicks on create account button")
-    public void user_clicks_on_create_account_button() {
+    public void userClicksOnCreateAccountButton() {
         clickOnElement(CreateAccountPage.CREATE_ACCOUNT_BUTTON);
     }
     @Then("Validate user navigates to sign up your account page")
-    public void validate_user_navigates_to_sign_up_your_account_page() {
+    public void validateUserNavigatesToSignUpYourAccountPage() {
         boolean isUserNavigatedToSignYourAccountPage = isElementDisplayed(CreateAccountPage.SIGN_UP_YOUR_ACCOUNT_PAGE);
         Assert.assertTrue(isUserNavigatedToSignYourAccountPage);
     }
     @Then("Validate email shows as expected on the page")
-    public void validate_email_shows_as_expected_on_the_page() {
+    public void validateEmailShowsAsExpectedOnThePage() {
         String actualEmail = getElementText(CreateAccountPage.EMAIL_AS_SHOWN_ON_SIGN_UP_PAGE);
         String expectedEmail = randomEmail;
         Assert.assertEquals(expectedEmail,actualEmail);
+    }
+    @Given("User navigates to account creation page")
+    public void userNavigatesToAccountCreationPage() {
+        clickOnElement(CreateAccountPage.CREATE_PRIMARY_ACCOUNT_BUTTON);
+    }
+    @When("user fills up the form with existing credential using map data table")
+    public void userFillsUpTheFormWithExistingCredentialUsingMapDataTable(DataTable dataTable) {
+        Map<String, String> data = dataTable.asMap();
+        String email = data.get("email");
+        String firstName = data.get("firstName");
+        String gender = data.get("gender");
+        String employmentStatus = data.get("employmentStatus");
+        String title = data.get("title");
+        String lastName = data.get("lastName");
+        String maritalStatus = data.get("maritalStatus");
+        String dateOfBirth = data.get("dateOfBirth");
+        sentTextToElement(CreateAccountPage.EMAIL, email);
+        sentTextToElement(CreateAccountPage.FIRST_NAME,firstName);
+        selectFromDropDown(CreateAccountPage.GENDER,gender);
+        sentTextToElement(CreateAccountPage.EMPLOYMENT_STATUS,employmentStatus);
+        selectFromDropDown(CreateAccountPage.title,title);
+        sentTextToElement(CreateAccountPage.LAST_NAME,lastName);
+        selectFromDropDown(CreateAccountPage.MARITAL_STATUS,maritalStatus);
+        sentTextToElement(CreateAccountPage.DATE_OF_BIRTH,dateOfBirth);
+    }
+    @Then("click on create account button")
+        public void userClicksOnCreateAccountBtn(){
+        clickOnElement(CreateAccountPage.CREATE_ACCOUNT_BUTTON);
+    }
+
+    @Then("Validate error message {string} as expected")
+    public void validateErrorMessageAsExpected(String expectedErrorMessage) {
+       String actualErrorMessage = getElementText(CreateAccountPage.ERROR_MESSAGE);
+       String modifiedErrorMessage = actualErrorMessage.replace("ERROR","").trim();
+       Assert.assertEquals(modifiedErrorMessage,expectedErrorMessage);
     }
 
 }

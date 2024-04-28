@@ -22,4 +22,6 @@ public class CreateAccountPage {
             "//h2[@class='chakra-heading css-1jb3vzl']");
     public static final By EMAIL_AS_SHOWN_ON_SIGN_UP_PAGE = By.xpath(
             "/html/body/div[1]/div/div[2]/div/div/div/h2[3]");
+    public static final By ERROR_MESSAGE = By.xpath(
+            "//div[@class='chakra-alert banner-error css-1ykemat']");
 }

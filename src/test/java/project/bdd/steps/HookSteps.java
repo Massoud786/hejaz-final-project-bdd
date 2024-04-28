@@ -9,8 +9,9 @@ import project.bdd.utility.SeleniumUtilities;
 
 public class HookSteps extends SeleniumUtilities {
     @Before
-    public void initiateTest(){
+    public void initiateTest()  {
         openBrowser();
+
     }
     @After
     public void closingBrowser(Scenario scenario) throws InterruptedException {
@@ -19,7 +20,7 @@ public class HookSteps extends SeleniumUtilities {
             byte[] capture = screenShot.getScreenshotAs(OutputType.BYTES);
             scenario.attach(capture, "image/png","screenshot");
         }
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         getChrome().quit();
     }
 }
