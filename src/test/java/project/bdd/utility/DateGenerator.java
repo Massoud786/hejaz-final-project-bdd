@@ -15,7 +15,7 @@ public class DateGenerator {
     public static String getADayAfterCurrentDate(){
         LocalDate currentDate = LocalDate.now();
         LocalDate dayAfterCurrentDate = currentDate.plusDays(1);
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM d, yyyy");
         String formattedDate = dayAfterCurrentDate.format(formatter);
         return formattedDate;
     }
