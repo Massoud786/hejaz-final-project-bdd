@@ -8,8 +8,13 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "classpath:features",
         glue = "project.bdd.steps",
-        //tags = "@AccountsTest_2",
-        dryRun = false
+        dryRun = false,
+        plugin = {
+        "pretty",
+        "html:target/test_report/passed_login_test/report.html",
+        "json:target/jsonReports/report.json"
+}
+
 )
 public class Test {
 }
