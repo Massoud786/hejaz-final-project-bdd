@@ -1,21 +1,24 @@
 package project.bdd.utility;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 public class DateGenerator {
     public static String getCurrentDate(){
-        Date currentDate = new Date();
-        SimpleDateFormat format = new SimpleDateFormat("MMMM dd, yyyy");
-        return format.format(currentDate);
+        LocalDate expectedDate = LocalDate.now(ZoneId.of("America/New_York"));
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM d, yyyy");
+        return expectedDate.format(formatter);
 
     }
     public static String getADayAfterCurrentDate(){
-        LocalDate currentDate = LocalDate.now();
-        LocalDate dayAfterCurrentDate = currentDate.plusDays(1);
+        LocalDate expectedDate = LocalDate.now(ZoneId.of("America/New_York"));
+        LocalDate dayAfterCurrentDate = expectedDate.plusDays(1);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM d, yyyy");
         return dayAfterCurrentDate.format(formatter);
+    }
+    public static void main(String[] args) {
+        System.out.println(getCurrentDate());
+        System.out.println(getADayAfterCurrentDate());
     }
 
 
