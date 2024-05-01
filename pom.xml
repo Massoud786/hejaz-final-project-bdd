@@ -25,12 +25,10 @@
             <version>7.15.0</version>
             <scope>test</scope>
         </dependency>
-
-
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.20.0</version>
+            <version>4.18.1</version>
         </dependency>
 
     </dependencies>
@@ -42,7 +40,7 @@
                 <version>3.1.2</version>
                 <configuration>
                     <includes>
-                        <include>TestRunner.java</include>
+                        <include>Test.java</include>
                     </includes>
                 </configuration>
             </plugin>
