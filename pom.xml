@@ -12,12 +12,20 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <test.environment>dev</test.environment>
+        <test.browser>chrome</test.browser>
+        <cucumber.version>7.17.0</cucumber.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>7.15.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-gherkin</artifactId>
+            <version>7.17.0</version>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>

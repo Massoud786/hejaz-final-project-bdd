@@ -7,8 +7,6 @@
     <list default="true" id="3eef8324-d43e-4d54-a579-82d33086f924" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/project/bdd/steps/PlansTestStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/project/bdd/steps/PlansTestStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/project/bdd/utility/DateGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/project/bdd/utility/DateGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
