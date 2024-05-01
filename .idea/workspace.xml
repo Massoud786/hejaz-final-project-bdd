@@ -38,7 +38,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.DateGenerator">
+  <component name="RunManager">
     <configuration name="DateGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="project.bdd.utility.DateGenerator" />
       <module name="hejaz-final-project-bdd" />
