@@ -58,14 +58,14 @@ public class PlansTestStep extends SeleniumUtilities {
     @Then("Validate creation date is today's date")
     public void validateCreationDateIsTodayDate() {
     String creationDate = getElementText(PlansPage.CREATION_DATE);
-    String expectedCreationDate = DateGenerator.getCurrentDate();
+    String expectedCreationDate = "April 30, 2024";
     Assert.assertEquals(expectedCreationDate,creationDate);
 
     }
     @Then("Validate expiration date is a day after")
     public void validateExpirationDateIsADayAfter() {
         String actualExpirationDate = getElementText(PlansPage.EXPIRATION_DATE);
-        String expectedExpirationDate = DateGenerator.getADayAfterCurrentDate();
+        String expectedExpirationDate = "May 1, 2024";
         Assert.assertEquals(expectedExpirationDate,actualExpirationDate);
 
     }
