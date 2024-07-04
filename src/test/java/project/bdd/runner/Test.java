@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "classpath:features",
         glue = "project.bdd.steps",
+        tags = "@Smoke",
         dryRun = false,
         plugin = {
         "pretty",
